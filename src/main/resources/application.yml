@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: adidas-db-api-eureka-feign-client
+
+server:
+  port: 8091
+#  ssl:
+#     key-store: bolivadev.p12
+#     key-store-password: 123456
+#     keyStoreType: PKCS12
+#     keyAlias: bolivadev  
+eureka:
+  client:
+    serviceUrl:
+      registerWithEureka: true
+      fetchRegistry: true
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    preferIpAddress: true
+
