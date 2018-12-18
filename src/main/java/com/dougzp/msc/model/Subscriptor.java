@@ -5,11 +5,11 @@ import java.util.Objects;
 
 import javax.validation.constraints.NotNull;
 
-import org.springframework.lang.NonNull;
 import org.springframework.validation.annotation.Validated;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
@@ -17,7 +17,7 @@ import io.swagger.annotations.ApiModelProperty;
  */
 @Validated
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-12-12T16:56:00.547Z")
-
+@JsonInclude(Include.NON_NULL)
 public class Subscriptor   {
   @JsonProperty("id")
 

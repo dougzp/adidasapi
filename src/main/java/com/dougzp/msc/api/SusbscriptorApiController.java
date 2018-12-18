@@ -15,6 +15,7 @@ import com.dougzp.msc.model.Subscriptor;
 import com.dougzp.msc.service.IEmailKafkaService;
 import com.dougzp.msc.service.IEventRegisterKafkaService;
 import com.dougzp.msc.service.ISubscriptionRegister;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import feign.FeignException;
@@ -60,6 +61,7 @@ public class SusbscriptorApiController implements SusbscriptorApi {
 				ResponseEntity<Subscriptor> subscriptionResult = subscriptionRegister
 						.registerSubscription("TOKEN_ADIDAS_AUTH",susbsriptor_);
 				Long longIdResult = subscriptionResult.getBody().getId();
+
 				return new ResponseEntity<Object>(longIdResult, HttpStatus.CREATED);
 
 			} catch (FeignException ex) {
